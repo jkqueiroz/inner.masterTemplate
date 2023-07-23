@@ -23,8 +23,16 @@ import Typography from "views/Typography.js";
 import TableList from "views/Tables.js";
 import UserPage from "views/User.js";
 import Cadastro from "views/Cadastro.js";
+import Upload from "views/Upload";
 
 var routes = [
+   {
+    path: "/Upload",
+    name: "Uploads",
+    icon: "nc-icon nc-cloud-upload-94",
+    component: Upload,
+    layout: "/admin"
+  },
   {
     path: "/tables",
     name: "Clientes",

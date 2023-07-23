@@ -37,7 +37,7 @@ function Tables() {
     <>
       <div className="content">
         <Row>
-        <Col md="12">
+          <Col md="12">
             <Card className="card-user">
               <CardHeader>
                 <CardTitle tag="h5">Cadastro de Devedores</CardTitle>
