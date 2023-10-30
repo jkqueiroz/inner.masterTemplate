@@ -17,6 +17,11 @@
 
 */
 import React from "react";
+import { Line, Pie } from "react-chartjs-2";
+import {
+  dashboardEmailStatisticsChart,
+  dashboardNASDAQChart
+} from "variables/charts.js";
 
 // reactstrap components
 import {
@@ -26,7 +31,9 @@ import {
   CardTitle,
   Table,
   Row,
-  Col
+  CardFooter,
+  Col,
+  Button
 } from "reactstrap";
 
 function Tables() {
@@ -37,127 +44,153 @@ function Tables() {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Devedores</CardTitle>
+                <CardTitle tag="h4">Análise de Performance em Treino</CardTitle>
+              </CardHeader>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="12">
+            <Card>
+              <CardHeader>
+                <CardTitle tag="h4">Atletas</CardTitle>
               </CardHeader>
               <CardBody>
                 <Table responsive>
                   <thead className="text-primary">
                     <tr>
                       <th>Nome</th>
-                      <th>País</th>
-                      <th>Cidade</th>
-                      <th className="text-right">Débito</th>
+                      <th>Ataque</th>
+                      <th>Defesa</th>
+                      <th>Passe</th>
+                      <th>Levatamento</th>
+                      <th>Bloqueio</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Dakota Rice</td>
-                      <td>Niger</td>
-                      <td>Oud-Turnhout</td>
-                      <td className="text-right">$36,738</td>
+                      <td>Manuella Penharbel</td>
+                      <td><Button
+                            block
+                            color="primary"
+                           
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="danger"
+                           
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="warning"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="success"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="default"
+                          >
+                            +1
+                          </Button></td>
                     </tr>
                     <tr>
-                      <td>Minerva Hooper</td>
-                      <td>Curaçao</td>
-                      <td>Sinaai-Waas</td>
-                      <td className="text-right">$23,789</td>
-                    </tr>
-                    <tr>
-                      <td>Sage Rodriguez</td>
-                      <td>Netherlands</td>
-                      <td>Baileux</td>
-                      <td className="text-right">$56,142</td>
-                    </tr>
-                    <tr>
-                      <td>Philip Chaney</td>
-                      <td>Korea, South</td>
-                      <td>Overland Park</td>
-                      <td className="text-right">$38,735</td>
-                    </tr>
-                    <tr>
-                      <td>Doris Greene</td>
-                      <td>Malawi</td>
-                      <td>Feldkirchen in Kärnten</td>
-                      <td className="text-right">$63,542</td>
-                    </tr>
-                    <tr>
-                      <td>Mason Porter</td>
-                      <td>Chile</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$78,615</td>
-                    </tr>
-                    <tr>
-                      <td>Jon Porter</td>
-                      <td>Portugal</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$98,615</td>
+                    <td>Murillo Penharbel</td>
+                      <td><Button
+                            block
+                            color="primary"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="danger"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="warning"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="success"
+                          >
+                            +1
+                          </Button></td>
+                          <td><Button
+                            block
+                            color="default"
+                          >
+                            +1
+                          </Button></td>
                     </tr>
                   </tbody>
                 </Table>
               </CardBody>
             </Card>
           </Col>
-          <Col md="12">
-            <Card className="card-plain">
+
+        </Row>
+        <Row>
+          <Col md="4">
+            <Card>
               <CardHeader>
-                <CardTitle tag="h4">Clientes Adimplentes</CardTitle>
+                <CardTitle tag="h5">Análise de Treino</CardTitle>
+                <p className="card-category">Ultimos 15 Treinos</p>
+              </CardHeader>
+              <CardBody style={{ height: "266px" }}>
+                <Pie
+                  data={dashboardEmailStatisticsChart.data}
+                  options={dashboardEmailStatisticsChart.options}
+                />
+              </CardBody>
+              <CardFooter>
+                <div className="legend">
+                  <i className="fa fa-circle text-primary" /> Ataque{" "}
+                  <i className="fa fa-circle text-warning" /> Defesa{" "}
+                  <i className="fa fa-circle text-danger" /> Bloqueio{" "}
+                  <i className="fa fa-circle text-gray" /> Saque
+                </div>
+                <hr />
+
+              </CardFooter>
+            </Card>
+          </Col>
+          <Col md="8">
+            <Card className="card-chart">
+              <CardHeader>
+                <CardTitle tag="h5">Evolução Mensal</CardTitle>
+                <p className="card-category">Fundamentos Certos no Último Mês</p>
               </CardHeader>
               <CardBody>
-                <Table responsive>
-                  <thead className="text-primary">
-                    <tr>
-                      <th>Nome</th>
-                      <th>País</th>
-                      <th>Cidade</th>
-                      <th className="text-right">Valor Pago</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Dakota Rice</td>
-                      <td>Niger</td>
-                      <td>Oud-Turnhout</td>
-                      <td className="text-right">$36,738</td>
-                    </tr>
-                    <tr>
-                      <td>Minerva Hooper</td>
-                      <td>Curaçao</td>
-                      <td>Sinaai-Waas</td>
-                      <td className="text-right">$23,789</td>
-                    </tr>
-                    <tr>
-                      <td>Sage Rodriguez</td>
-                      <td>Netherlands</td>
-                      <td>Baileux</td>
-                      <td className="text-right">$56,142</td>
-                    </tr>
-                    <tr>
-                      <td>Philip Chaney</td>
-                      <td>Korea, South</td>
-                      <td>Overland Park</td>
-                      <td className="text-right">$38,735</td>
-                    </tr>
-                    <tr>
-                      <td>Doris Greene</td>
-                      <td>Malawi</td>
-                      <td>Feldkirchen in Kärnten</td>
-                      <td className="text-right">$63,542</td>
-                    </tr>
-                    <tr>
-                      <td>Mason Porter</td>
-                      <td>Chile</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$78,615</td>
-                    </tr>
-                    <tr>
-                      <td>Jon Porter</td>
-                      <td>Portugal</td>
-                      <td>Gloucester</td>
-                      <td className="text-right">$98,615</td>
-                    </tr>
-                  </tbody>
-                </Table>
+                <Line
+                  data={dashboardNASDAQChart.data}
+                  options={dashboardNASDAQChart.options}
+                  width={400}
+                  height={100}
+                />
+
               </CardBody>
+              <CardFooter>
+                <div className="chart-legend">
+                  <i className="fa fa-circle text-info" /> Ataque{" "}
+                  <i className="fa fa-circle text-warning" /> Defesa
+                </div>
+                <hr />
+               
+              </CardFooter>
             </Card>
           </Col>
         </Row>

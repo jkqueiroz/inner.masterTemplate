@@ -52,7 +52,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Capacity</p>
+                      <p className="card-category">Arquivos Armazenados</p>
                       <CardTitle tag="p">150GB</CardTitle>
                       <p />
                     </div>
@@ -78,7 +78,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
+                      <p className="card-category">Arquivos Recebidos</p>
                       <CardTitle tag="p">$ 1,345</CardTitle>
                       <p />
                     </div>
@@ -104,7 +104,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
+                      <p className="card-category">Integrações Recusadas</p>
                       <CardTitle tag="p">23</CardTitle>
                       <p />
                     </div>
@@ -130,7 +130,7 @@ function Dashboard() {
                   </Col>
                   <Col md="8" xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
+                      <p className="card-category">Integrações Confirmadas</p>
                       <CardTitle tag="p">+45K</CardTitle>
                       <p />
                     </div>

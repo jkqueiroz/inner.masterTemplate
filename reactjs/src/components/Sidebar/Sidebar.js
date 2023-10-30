@@ -57,14 +57,13 @@ function Sidebar(props) {
           className="simple-text logo-mini"
         >
           <div className="logo-img">
-            <img src={logo} alt="react-logo" />
           </div>
         </a>
         <a
           href="https://inner"
           className="simple-text logo-normal"
         >
-          INNER - SGIP
+          Projects
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>

@@ -16,14 +16,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Dashboard from "views/Dashboard.js";
-import Notifications from "views/Notifications.js";
-import Icons from "views/Icons.js";
-import Typography from "views/Typography.js";
+//import Dashboard from "views/Dashboard.js";
+//import Notifications from "views/Notifications.js";
+//import Icons from "views/Icons.js";
+//import Typography from "views/Typography.js";
 import TableList from "views/Tables.js";
-import UserPage from "views/User.js";
-import Cadastro from "views/Cadastro.js";
+//import UserPage from "views/User.js";
+//import Cadastro from "views/Cadastro.js";
 import Upload from "views/Upload";
+import Arquivos from "views/Arquivos.js";
+import Photo from "views/Photos.js";
 
 var routes = [
    {
@@ -34,12 +36,27 @@ var routes = [
     layout: "/admin"
   },
   {
+    path: "/Arquivos",
+    name: "Arquivos",
+    icon: "nc-icon nc-cloud-upload-94",
+    component: Arquivos,
+    layout: "/admin"
+  },
+  {
+    path: "/Photos",
+    name: "Photos",
+    icon: "nc-icon nc-cloud-upload-94",
+    component: Photo,
+    layout: "/admin"
+  },
+  {
     path: "/tables",
-    name: "Clientes",
+    name: "Evolução",
     icon: "nc-icon nc-tile-56",
     component: TableList,
     layout: "/admin"
-  },
+  
+  }/*,
   {
     path: "/Cadastro",
     name: "Devedores",
@@ -81,6 +98,6 @@ var routes = [
     icon: "nc-icon nc-caps-small",
     component: Typography,
     layout: "/admin"
-  }
+  }*/
 ];
 export default routes;
